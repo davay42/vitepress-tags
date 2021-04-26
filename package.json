@@ -5,8 +5,8 @@
   ],
   "main": "index.js",
   "version": "0.1.7",
-  "devDependencies": {},
   "dependencies": {
+    "app-root-path": "^3.0.0",
     "glob": "^7.1.6",
     "gray-matter": "^4.0.2"
   }

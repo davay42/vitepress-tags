@@ -1,14 +1,21 @@
 lockfileVersion: 5.3
 
 specifiers:
+  app-root-path: ^3.0.0
   glob: ^7.1.6
   gray-matter: ^4.0.2
 
 dependencies:
+  app-root-path: 3.0.0
   glob: 7.1.6
   gray-matter: 4.0.2
 
 packages:
+
+  /app-root-path/3.0.0:
+    resolution: {integrity: sha512-qMcx+Gy2UZynHjOHOIXPNvpf+9cjvk3cWrBBK7zg4gH9+clobJRb9NGzcT7mQTcV/6Gm/1WelUtqxVXnNlrwcw==}
+    engines: {node: '>= 6.0.0'}
+    dev: false
 
   /argparse/1.0.10:
     resolution: {integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==}

@@ -2,21 +2,22 @@ const fs = require('fs')
 const path = require('path')
 const matter = require('gray-matter')
 const glob = require('glob')
+var appRoot = require('app-root-path')
 
-module.exports = function (dir = '../../', pattern = '/**/*.md') {
-  const pageDir = path.resolve(require.main.filename, dir)
+module.exports = function (dir = './pages', pattern = '/**/*.md') {
+  const pageDir = path.resolve(appRoot.toString(), dir)
 
   console.log(dir)
   console.log(pageDir)
   console.log(require.main.filename)
 
-  const filesList = glob.sync(dir + pattern, { nodir: true })
+  const filesList = glob.sync(pageDir + pattern, { nodir: true })
   const tags = {}
   const all = filesList.map((file) => {
     let stats = fs.statSync(file)
     let fileContent = fs.readFileSync(file, 'utf8')
     let frontmatter = matter(fileContent)
-    let relLink = path.relative(dir, file)
+    let relLink = path.relative(pageDir, file)
     let url = relLink.includes('index.md')
       ? relLink.slice(0, -8)
       : relLink.slice(0, -3) + '.html'
