@@ -1,9 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const matter = require('gray-matter')
-
 const glob = require('glob')
-const { url } = require('inspector')
 
 module.exports = function (dir = './pages', pattern = '/**/*.md') {
   const pageDir = path.resolve(__dirname, dir)
