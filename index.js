@@ -3,10 +3,14 @@ const path = require('path')
 const matter = require('gray-matter')
 const glob = require('glob')
 
-module.exports = function (dir = './pages', pattern = '/**/*.md') {
-  const pageDir = path.resolve(__dirname, dir)
+module.exports = function (dir = '../../', pattern = '/**/*.md') {
+  const pageDir = path.resolve(require.main.filename, dir)
 
-  const filesList = glob.sync(pageDir + pattern, { nodir: true })
+  console.log(dir)
+  console.log(pageDir)
+  console.log(require.main.filename)
+
+  const filesList = glob.sync(dir + pattern, { nodir: true })
   const tags = {}
   const all = filesList.map((file) => {
     let stats = fs.statSync(file)
