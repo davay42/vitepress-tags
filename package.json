@@ -25,6 +25,7 @@
     "index.js"
   ],
   "types": "./dist/index.d.ts",
+  "test": "test.js",
   "main": "index.js",
   "version": "0.2.1",
   "dependencies": {
