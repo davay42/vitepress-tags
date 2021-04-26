@@ -7,10 +7,6 @@ var appRoot = require('app-root-path')
 module.exports = function (dir = './pages', pattern = '/**/*.md') {
   const pageDir = path.resolve(appRoot.toString(), dir)
 
-  console.log(dir)
-  console.log(pageDir)
-  console.log(require.main.filename)
-
   const filesList = glob.sync(pageDir + pattern, { nodir: true })
   const tags = {}
   const all = filesList.map((file) => {

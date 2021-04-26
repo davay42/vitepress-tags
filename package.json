@@ -1,5 +1,26 @@
 {
   "name": "vitepress-tags",
+  "description": "Create tag collections for navbar, sidebar or custom navigation from your vitepress .md pages frontmatter",
+  "keywords": [
+    "vitepress",
+    "tags",
+    "pages",
+    "digital garden",
+    "gardening",
+    "markdown",
+    "frontmatter"
+  ],
+  "repository": "github:davay42/vitepress-tags",
+  "licence": "MIT",
+  "author": {
+    "name": "Denis Starov",
+    "email": "davay@defucc.me",
+    "url": "https://starovdenis.com"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "http://ko-fi/davay42"
+  },
   "files": [
     "index.js"
   ],
