@@ -95,11 +95,10 @@ So then I wrote this by myself. Used it as a snippet code in a couple of project
 
 The final piece was the recent [article](https://www.joshwcomeau.com/blog/how-i-built-my-blog/#index-pages) by Josh Cameau, who described a similar `getLatestContent` function he uses to parse md files for his blog on Next.js.
 
->`getLatestContent` is a method that traverses the local filesystem to find all of the .mdx blog posts. The logic looks something like this:
-
-- Collect all of the MDX files in the pages directory, using fs.readdirSync.
-- Filter out any unpublished posts (ones where isPublished is not set to true).
-- Sort all of the blog posts by publishedOn, and slice out everything after the specified limit.
-- Return the data.
+> `getLatestContent` is a method that traverses the local filesystem to find all of the .mdx blog posts. The logic looks something like this:
+> - Collect all of the MDX files in the pages directory, using fs.readdirSync.
+> - Filter out any unpublished posts (ones where isPublished is not set to true).
+> - Sort all of the blog posts by publishedOn, and slice out everything after the specified limit.
+> - Return the data.
 
 So it's a nice fun fact to see the parallels in vue and react ecosystem development. Both matter, Vue is just more fun to me. Peace! ✌️
