@@ -1,5 +1,6 @@
 {
   "name": "vitepress-tags",
+  "version": "0.2.1",
   "description": "Create tag collections for navbar, sidebar or custom navigation from your vitepress .md pages frontmatter automatically",
   "keywords": [
     "vitepress",
@@ -25,9 +26,10 @@
     "index.js"
   ],
   "types": "./dist/index.d.ts",
-  "test": "test.js",
   "main": "index.js",
-  "version": "0.2.1",
+  "scripts": {
+    "test": "test.js"
+  },
   "dependencies": {
     "app-root-path": "^3.0.0",
     "glob": "^7.1.6",
