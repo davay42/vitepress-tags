@@ -1,5 +1,3 @@
-## Create tag collections for navbar, sidebar or custom navigation from your vitepress .md pages frontmatter
-
 Easily create a blog, a digital garden or a directory from your markdown content and [vitepress](https://vitepress.vuejs.org/).
 
 ### Installation

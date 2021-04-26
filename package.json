@@ -24,6 +24,7 @@
   "files": [
     "index.js"
   ],
+  "types": "./dist/index.d.ts",
   "main": "index.js",
   "version": "0.2.0",
   "dependencies": {
