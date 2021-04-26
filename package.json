@@ -28,7 +28,7 @@
   "types": "./dist/index.d.ts",
   "main": "index.js",
   "scripts": {
-    "test": "test.js"
+    "test": "node test.js"
   },
   "dependencies": {
     "app-root-path": "^3.0.0",
