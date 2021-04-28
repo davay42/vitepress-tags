@@ -5,7 +5,8 @@ const glob = require('glob')
 var appRoot = require('app-root-path')
 
 module.exports = function (dir = './pages', pattern = '/**/*.md') {
-  const pageDir = path.resolve(appRoot.toString(), dir)
+  const root = appRoot.toString()
+  const pageDir = path.resolve(root, dir)
 
   const filesList = glob.sync(pageDir + pattern, { nodir: true })
   const tags = {}
@@ -18,6 +19,14 @@ module.exports = function (dir = './pages', pattern = '/**/*.md') {
       ? relLink.slice(0, -8)
       : relLink.slice(0, -3) + '.html'
 
+    function getMediaPath() {
+      if (!frontmatter?.data?.media) return null
+      let fileDir = path.dirname(file)
+      let mediaPath = path.resolve(fileDir, frontmatter?.data?.media)
+      let link = path.relative(pageDir, mediaPath)
+      return '/' + link
+    }
+
     let data = {
       title: frontmatter.data?.title,
       subtitle: frontmatter.data?.subtitle,
@@ -26,6 +35,7 @@ module.exports = function (dir = './pages', pattern = '/**/*.md') {
       link: '/' + url,
       data: frontmatter?.data,
       more: !!frontmatter.content,
+      media: getMediaPath(),
     }
 
     if (typeof frontmatter?.data?.tags == 'string') {

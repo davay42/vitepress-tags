@@ -76,20 +76,19 @@ Here's the actual code that creates a record for a given page. Last modified tim
   lastModified: stats.mtime,
   link: '/' + url,
   data: frontmatter?.data,  // here you have all the frontmatter fields
+  media: getMediaPath(), // you set 'media: some/relative/path/to/picture.jpg and you'll get an absolute (to your web site domain)
   more: !!frontmatter.content,
 }
 ```
 
 #### The story behind
 
-First I was thinking that this script shuold obviously be shipped with vitepress. Then I understood, that it's a feature.
+First I was thinking that this script shuold obviously be shipped with vitepress. Then I understood, that it's a feature. Here's the quote from the vitepress docs:
 
-```
-Lighter Page Weight
-...
-- Does not ship metadata for every page on every request. This decouples page weight from total number of pages. Only the current page's metadata is sent. Client side navigation fetches the new page's component and metadata together.
-...
-```
+> ## Lighter Page Weight
+>
+> Does not ship metadata for every page on every request. This decouples page weight from total number of pages. Only the current page's metadata is sent. Client side navigation fetches the new page's component and metadata together.
+
 
 So then I wrote this by myself. Used it as a snippet code in a couple of projects and then realized I need to make it an npm package to be more consistent.
 
