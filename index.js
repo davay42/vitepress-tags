@@ -19,14 +19,6 @@ module.exports = function (dir = './pages', pattern = '/**/*.md') {
       ? relLink.slice(0, -8)
       : relLink.slice(0, -3) + '.html'
 
-    function getMediaPath() {
-      if (!frontmatter?.data?.media) return null
-      let fileDir = path.dirname(file)
-      let mediaPath = path.resolve(fileDir, frontmatter?.data?.media)
-      let link = path.relative(pageDir, mediaPath)
-      return '/' + link
-    }
-
     let data = {
       title: frontmatter.data?.title,
       subtitle: frontmatter.data?.subtitle,
@@ -35,7 +27,6 @@ module.exports = function (dir = './pages', pattern = '/**/*.md') {
       link: '/' + url,
       data: frontmatter?.data,
       more: !!frontmatter.content,
-      media: getMediaPath(),
     }
 
     if (typeof frontmatter?.data?.tags == 'string') {
@@ -58,3 +49,12 @@ module.exports = function (dir = './pages', pattern = '/**/*.md') {
 
   return { all, ...tags }
 }
+
+// a function that doesn't work for production build
+// function getMediaPath() {
+//   if (!frontmatter?.data?.media) return null
+//   let fileDir = path.dirname(file)
+//   let mediaPath = path.resolve(fileDir, frontmatter?.data?.media)
+//   let link = path.relative(pageDir, mediaPath)
+//   return '/' + link
+// }

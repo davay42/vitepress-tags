@@ -76,7 +76,6 @@ Here's the actual code that creates a record for a given page. Last modified tim
   lastModified: stats.mtime,
   link: '/' + url,
   data: frontmatter?.data,  // here you have all the frontmatter fields
-  media: getMediaPath(), // you set 'media: some/relative/path/to/picture.jpg and you'll get an absolute (to your web site domain)
   more: !!frontmatter.content,
 }
 ```
