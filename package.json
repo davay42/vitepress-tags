@@ -1,6 +1,6 @@
 {
   "name": "vitepress-tags",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Create tag collections for navbar, sidebar or custom navigation from your vitepress .md pages frontmatter automatically",
   "keywords": [
     "vitepress",
