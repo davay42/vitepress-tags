@@ -25,8 +25,10 @@ module.exports = function (dir = './pages', pattern = '/**/*.md') {
       text: frontmatter.data?.title,
       lastModified: stats.mtime,
       link: '/' + url,
+      date: frontmatter.data?.date,
       data: frontmatter?.data,
       more: !!frontmatter.content,
+      content: frontmatter.block ? frontmatter.content : null,
     }
 
     if (typeof frontmatter?.data?.tags == 'string') {
@@ -46,6 +48,15 @@ module.exports = function (dir = './pages', pattern = '/**/*.md') {
     }
     return data
   })
+
+  Object.values(tags).forEach((tag) =>
+    tag.sort((a, b) => {
+      if (a?.data && b?.date) {
+        return a.date > b.date ? -1 : 1
+      }
+      return a?.lastModified > b?.lastModified ? -1 : 1
+    }),
+  )
 
   return { all, ...tags }
 }
