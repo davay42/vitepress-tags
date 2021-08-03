@@ -48,15 +48,22 @@ module.exports = function (dir = './pages', pattern = '/**/*.md') {
     }
     return data
   })
-
-  Object.values(tags).forEach((tag) =>
-    tag.sort((a, b) => {
+  Object.entries(tags).forEach(([tag, list]) => {
+    let len = list.length
+    list.sort((a, b) => {
       if (a?.data && b?.date) {
         return a.date > b.date ? -1 : 1
       }
       return a?.lastModified > b?.lastModified ? -1 : 1
-    }),
-  )
+    })
+    tags[tag] = list.map((el, i) => {
+      return {
+        ...el,
+        index: i + 1,
+        total: len,
+      }
+    })
+  })
 
   return { all, ...tags }
 }
