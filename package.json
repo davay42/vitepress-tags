@@ -11,8 +11,10 @@
     "markdown",
     "frontmatter"
   ],
-  "type": "module",
-  "repository": "github:davay42/vitepress-tags",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davay42/vitepress-tags.git"
+  },
   "licence": "MIT",
   "author": {
     "name": "Denis Starov",
@@ -24,17 +26,27 @@
     "url": "https://www.ko-fi.com/davay"
   },
   "files": [
-    "index.js"
+    "dist"
   ],
-  "types": "./dist/index.d.ts",
-  "main": "index.js",
+  "main": "./dist/vitepress-tags.umd.js",
+  "module": "./dist/vitepress-tags.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vitepress-tags.es.js",
+      "require": "./dist/vitepress-tags.umd.js"
+    }
+  },
   "scripts": {
-    "test": "node test.js"
+    "test": "node src/test.js",
+    "build": "vite build"
   },
   "dependencies": {
     "app-root-path": "^3.0.0",
     "fast-glob": "^3.2.11",
     "glob": "^7.2.0",
     "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {
+    "vite": "^2.8.2"
   }
 }
