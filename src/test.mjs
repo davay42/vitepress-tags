@@ -1,4 +1,4 @@
-import getTags from "./main.js";
+import getTags from "./main.mjs";
 
 const tags = getTags({ dir: "./" });
 

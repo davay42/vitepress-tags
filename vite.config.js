@@ -7,7 +7,7 @@ export default defineConfig({
   build: {
     outDir: "dist",
     lib: {
-      entry: path.resolve(__dirname, "./src/main.js"),
+      entry: path.resolve(__dirname, "./src/main.mjs"),
       name: "vitepress-tags",
     },
   },

@@ -37,7 +37,7 @@
     }
   },
   "scripts": {
-    "test": "node src/test.js",
+    "test": "node src/test.mjs",
     "build": "vite build"
   },
   "dependencies": {
