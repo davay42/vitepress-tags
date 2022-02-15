@@ -1,3 +1,5 @@
-const getTags = require('./index.js')
+import getTags from "./index.js";
 
-console.log(getTags())
+const tags = getTags({ dir: "./" });
+
+console.log(tags.all);

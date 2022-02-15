@@ -11,6 +11,7 @@
     "markdown",
     "frontmatter"
   ],
+  "type": "module",
   "repository": "github:davay42/vitepress-tags",
   "licence": "MIT",
   "author": {
@@ -32,7 +33,8 @@
   },
   "dependencies": {
     "app-root-path": "^3.0.0",
-    "glob": "^7.1.6",
-    "gray-matter": "^4.0.2"
+    "fast-glob": "^3.2.11",
+    "glob": "^7.2.0",
+    "gray-matter": "^4.0.3"
   }
 }
