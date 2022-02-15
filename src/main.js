@@ -1,10 +1,10 @@
-import fs from "node:fs";
-import path from "node:path";
-import matter from "gray-matter";
-import glob from "fast-glob";
-import appRoot from "app-root-path";
+const fs = require("fs");
+const path = require("path");
+const matter = require("gray-matter");
+const glob = require("fast-glob");
+const appRoot = require("app-root-path");
 
-export default function ({
+module.exports = function ({
   dir = "./docs",
   pattern = "/**/*.md",
   publicMedia = ["icon", "cover"],
@@ -98,4 +98,4 @@ export default function ({
   });
 
   return { all, ...tags };
-}
+};

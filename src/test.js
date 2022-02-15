@@ -1,4 +1,4 @@
-import getTags from "./main.mjs";
+const getTags = require("../dist/vitepress-tags.umd");
 
 const tags = getTags({ dir: "./" });
 
