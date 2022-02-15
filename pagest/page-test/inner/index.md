@@ -1,6 +1,6 @@
 ---
 title: test inner img
-icon: logo.svg
+icon: ../logo.svg
 tags: icon
 ---
 
