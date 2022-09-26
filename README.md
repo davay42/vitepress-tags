@@ -4,17 +4,17 @@ Easily create a blog, a digital garden or a directory from your markdown content
 
 `npm i -D vitepress-tags`
 
-Use it in your `.vitepress/config.js` to automatically create navbar and sidebar navigation. You can also the lists of pages available on any page with theme's `customData`. It will be available in your vitepress theme components as `$site.customData.pages`.
+Use it in your `.vitepress/config.js` to automatically create navbar and sidebar navigation. You can also view the lists of pages available on any page with theme's `customData`. It will be available in your vitepress theme components as `$site.customData.pages`.
 
 ```js
 import getTags from 'vitepress-tags'
 
 const pages = getTags({
-  dir = "./docs",
-  pattern = "/**/*.md",
-  publicMedia = ["icon", "cover"],
-  ignore = ["**/public/", "**/node_modules/**/*.md"],
-  mediaFolder = "_media",
+  dir: "./docs",
+  pattern: "/**/*.md",
+  publicMedia: ["icon", "cover"],
+  ignore: ["**/public/", "**/node_modules/**/*.md"],
+  mediaFolder: "_media",
 })
 
 const config = {

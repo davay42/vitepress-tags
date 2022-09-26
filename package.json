@@ -1,52 +1,52 @@
 {
-  "name": "vitepress-tags",
-  "version": "0.6.2",
-  "description": "Create tag collections for navbar, sidebar or custom navigation from your vitepress .md pages frontmatter automatically",
-  "keywords": [
-    "vitepress",
-    "tags",
-    "pages",
-    "digital garden",
-    "gardening",
-    "markdown",
-    "frontmatter"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/davay42/vitepress-tags.git"
-  },
-  "licence": "MIT",
-  "author": {
-    "name": "Denis Starov",
-    "email": "davay@defucc.me",
-    "url": "https://starovdenis.com"
-  },
-  "funding": {
-    "type": "individual",
-    "url": "https://www.ko-fi.com/davay"
-  },
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/vitepress-tags.umd.js",
-  "module": "./dist/vitepress-tags.es.js",
-  "exports": {
-    ".": {
-      "import": "./dist/vitepress-tags.es.js",
-      "require": "./dist/vitepress-tags.umd.js"
-    }
-  },
-  "scripts": {
-    "test": "node src/test.js",
-    "build": "vite build"
-  },
-  "dependencies": {
-    "app-root-path": "^3.0.0",
-    "fast-glob": "^3.2.11",
-    "glob": "^7.2.0",
-    "gray-matter": "^4.0.3"
-  },
-  "devDependencies": {
-    "vite": "^2.8.2"
-  }
+	"name": "vitepress-tags",
+	"version": "0.6.2",
+	"description": "Create tag collections for navbar, sidebar or custom navigation from your vitepress .md pages frontmatter automatically",
+	"keywords": [
+		"vitepress",
+		"tags",
+		"pages",
+		"digital garden",
+		"gardening",
+		"markdown",
+		"frontmatter"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/davay42/vitepress-tags.git"
+	},
+	"funding": {
+		"type": "individual",
+		"url": "https://www.ko-fi.com/davay"
+	},
+	"author": {
+		"name": "Denis Starov",
+		"email": "davay@defucc.me",
+		"url": "https://starovdenis.com"
+	},
+	"exports": {
+		".": {
+			"import": "./dist/vitepress-tags.es.js",
+			"require": "./dist/vitepress-tags.umd.js"
+		}
+	},
+	"main": "./dist/vitepress-tags.umd.js",
+	"module": "./dist/vitepress-tags.es.js",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "vite build",
+		"test": "node src/test.js"
+	},
+	"dependencies": {
+		"app-root-path": "^3.1.0",
+		"fast-glob": "^3.2.12",
+		"glob": "^8.0.3",
+		"gray-matter": "^4.0.3"
+	},
+	"devDependencies": {
+		"vite": "^3.1.3"
+	},
+	"licence": "MIT"
 }
