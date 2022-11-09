@@ -1,6 +1,6 @@
 {
 	"name": "vitepress-tags",
-	"version": "0.6.4",
+	"version": "0.6.3",
 	"description": "Create tag collections for navbar, sidebar or custom navigation from your vitepress .md pages frontmatter automatically",
 	"keywords": [
 		"vitepress",
@@ -16,8 +16,8 @@
 		"url": "https://github.com/davay42/vitepress-tags.git"
 	},
 	"funding": {
-		"type": "individual",
-		"url": "https://www.ko-fi.com/davay"
+		"type": "github",
+		"url": "https://github.com/sponsors/davay42"
 	},
 	"author": {
 		"name": "Denis Starov",
